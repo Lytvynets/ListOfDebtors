@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/anymacstore/Desktop/Development/Swift_Projects/Table:CollectionView/List_Of_Debtors_Alpha0.1/ListOfDebtors.xcodeproj">
+      location = "group:ListOfDebtors.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
