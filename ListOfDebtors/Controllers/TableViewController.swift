@@ -18,7 +18,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Список Дебилов"
+        self.title = "List Of Debtors"
         self.tableView.separatorStyle = .singleLine
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
@@ -54,8 +54,8 @@ class TableViewController: UITableViewController {
     
     // MARK: - Work with Segue
     @IBAction func unwindsegue (_ segue: UIStoryboardSegue){
-        guard segue.identifier == "segue1" else { return }
-        let segue = segue.source as! AddUserViewController
+        guard segue.identifier == "SaveSegue" else { return }
+        let segue = segue.source as! NewDebtorViewController
         let newDebtor = segue.newDebtors
         
         let realm = try! Realm()

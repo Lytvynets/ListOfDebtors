@@ -9,22 +9,13 @@
 
 import UIKit
 
-
 class TableViewCell: UITableViewCell {
-
     
     @IBOutlet weak var NameOut: UILabel!
     @IBOutlet weak var secondNameOut: UILabel!
     @IBOutlet weak var SumOut: UILabel!
     @IBOutlet weak var number: UILabel!
    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-  
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
