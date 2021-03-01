@@ -15,10 +15,16 @@ class TableViewController: UITableViewController {
     
     var deb = debtorsArray
     
+
+    
+    
+   // var localization = "List"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "List Of Debtors"
+       self.title = "list of debtors"
+        
         self.tableView.separatorStyle = .singleLine
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
@@ -28,6 +34,8 @@ class TableViewController: UITableViewController {
         debtorsArray = realm.objects(Debtors.self)
         self.tableView.reloadData()
     }
+    
+
     
     
     

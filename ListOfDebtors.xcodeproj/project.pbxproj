@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6DA98610D33345F4EECA7D1C /* Pods_List_Of_Debtors_Alpha0_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3913C5356B378DA09EE8BF1 /* Pods_List_Of_Debtors_Alpha0_2.framework */; };
-		E315E90E2597809C007564A1 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E315E90D2597809C007564A1 /* AddUserViewController.swift */; };
+		E31594BE25ED4EB500D30B6A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31594BD25ED4EB500D30B6A /* SettingsViewController.swift */; };
 		E361B7D5257581120094790C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361B7D4257581120094790C /* AppDelegate.swift */; };
 		E361B7D7257581120094790C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361B7D6257581120094790C /* SceneDelegate.swift */; };
 		E361B7DC257581120094790C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E361B7DA257581120094790C /* Main.storyboard */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		BDEB504B5E4A2B698EEED921 /* Pods-List_Of_Debtors_Alpha0.2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-List_Of_Debtors_Alpha0.2.debug.xcconfig"; path = "Target Support Files/Pods-List_Of_Debtors_Alpha0.2/Pods-List_Of_Debtors_Alpha0.2.debug.xcconfig"; sourceTree = "<group>"; };
-		E315E90D2597809C007564A1 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		E31594BD25ED4EB500D30B6A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ListOfDebtors/Controllers/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		E361B7D1257581120094790C /* List_Of_Debtors_Alpha0.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = List_Of_Debtors_Alpha0.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E361B7D4257581120094790C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E361B7D6257581120094790C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		E361B7EE257581940094790C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E315E90D2597809C007564A1 /* AddUserViewController.swift */,
+				E31594BD25ED4EB500D30B6A /* SettingsViewController.swift */,
 				E366D48725EA84C4000BC51E /* NewDebtorViewController.swift */,
 				E361B7EB257581620094790C /* TableViewController.swift */,
 			);
@@ -262,9 +262,9 @@
 				E384398A25E6B3200051447F /* TableViewCell.swift in Sources */,
 				E361B7DF257581120094790C /* List_Of_Debtors_Alpha0_1.xcdatamodeld in Sources */,
 				E361B7D5257581120094790C /* AppDelegate.swift in Sources */,
-				E315E90E2597809C007564A1 /* AddUserViewController.swift in Sources */,
 				E361B7EC257581620094790C /* TableViewController.swift in Sources */,
 				E361B7D7257581120094790C /* SceneDelegate.swift in Sources */,
+				E31594BE25ED4EB500D30B6A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
