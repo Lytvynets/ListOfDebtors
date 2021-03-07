@@ -11,14 +11,17 @@ import RealmSwift
 
 class Debtors: Object {
     @objc dynamic var name = ""
-    @objc dynamic var secondName = ""
-    @objc dynamic var sum = "" 
+    @objc dynamic var lastName = ""
+    @objc dynamic var sum = ""
+    @objc dynamic var currency = ""
     
-    convenience init(name: String, secondName:String, sum: String) {
+    convenience init(name: String, lastName: String, sum: String, currency: String) {
         self.init()
         self.name = name
-        self.secondName = secondName
+        self.lastName = lastName
         self.sum = sum
+        self.currency = currency
+        
     }
     
 }

@@ -14,11 +14,8 @@ var debtorsArray: Results<Debtors>!
 class TableViewController: UITableViewController {
     
     var deb = debtorsArray
-    
-
-    
-    
-   // var localization = "List"
+    var dro = ""
+    var newDebtorViewController = NewDebtorViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +32,10 @@ class TableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
 
     
     
@@ -50,11 +51,12 @@ class TableViewController: UITableViewController {
         
         let debtors = debtorsArray[indexPath.row]
         
-        cell.number.text = ("\(indexPath.row + 1)")
+        cell.numberLabel.text = ("\(indexPath.row + 1)")
         
-        cell.NameOut.text = debtors.name
-        cell.secondNameOut.text = debtors.secondName
-        cell.SumOut.text = ("\(debtors.sum) $")
+        cell.nameLabel.text = debtors.name
+        cell.lastNameLabel.text = debtors.lastName
+        cell.sumLabel.text = ("\(debtors.sum) \(debtors.currency) ")
+       
         
         return cell
     }
@@ -64,7 +66,10 @@ class TableViewController: UITableViewController {
     @IBAction func unwindsegue (_ segue: UIStoryboardSegue){
         guard segue.identifier == "SaveSegue" else { return }
         let segue = segue.source as! NewDebtorViewController
+       
         let newDebtor = segue.newDebtors
+        
+        dro = segue.canurrency
         
         let realm = try! Realm()
         

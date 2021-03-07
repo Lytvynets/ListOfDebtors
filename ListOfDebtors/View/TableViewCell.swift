@@ -11,23 +11,17 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var NameOut: UILabel!
-    @IBOutlet weak var secondNameOut: UILabel!
-    @IBOutlet weak var SumOut: UILabel!
-    @IBOutlet weak var number: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var sumLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-
+    
     func set(debtorsArray: Debtors){
-        self.NameOut.text = debtorsArray.name
-        self.secondNameOut.text = debtorsArray.secondName
-        self.SumOut.text = debtorsArray.sum
+        self.nameLabel.text = debtorsArray.name
+        self.lastNameLabel.text = debtorsArray.lastName
+        self.sumLabel.text = debtorsArray.sum
        }
-
-
 
 }
 

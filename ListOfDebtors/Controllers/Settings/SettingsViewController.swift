@@ -15,6 +15,7 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var ukrainianSwitch: UISwitch!
     @IBOutlet weak var englishSwitch: UISwitch!
     
+    //Кнопки пользователя
     @IBOutlet weak var nameUserButton: UIButton!
     @IBOutlet weak var lastNameUserButton: UIButton!
     

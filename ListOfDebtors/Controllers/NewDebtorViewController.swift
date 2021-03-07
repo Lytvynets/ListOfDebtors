@@ -13,39 +13,57 @@ class NewDebtorViewController: UITableViewController, UITextFieldDelegate{
     
     var realm = try! Realm()
   
-    var newDebtors = Debtors(name: "", secondName: "", sum: "")
+  
+    var canurrency = ""
+    var newDebtors = Debtors(name: "", lastName: "", sum: "", currency: "")
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var sumTextField: UITextField!
     
+    @IBOutlet weak var currencyLabel: UILabel!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         sumTextField.delegate = self
+        
+        
     }
     
+   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     
+   
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "CanurrencySegue"{
+            if let canurrencyVC = segue.destination as? CanurrencySettilngViewController {
+                canurrencyVC.complition = {[weak self] text in
+                    guard let self = self else { return }
+                    self.currencyLabel.text = text
+                    self.canurrency = text
+                }
+            }
+        }
+        
+        
         guard segue.identifier == "SaveSegue" else { return }
         
         let name = nameTextField.text ?? ""
         let secondName = lastNameTextField.text ?? ""
         let sum = sumTextField.text ?? ""
-        
-        self.newDebtors = Debtors(name: name, secondName: secondName, sum: sum)
+        let currency = canurrency
+        self.newDebtors = Debtors(name: name, lastName: secondName, sum: sum, currency: currency)
         
     }
-    
-    
-    
-    
     
     
     
