@@ -13,12 +13,13 @@ class YouDebtors: Object {
     @objc dynamic var name = ""
     @objc dynamic var lastName = ""
     @objc dynamic var sum = ""
+    @objc dynamic var currency = ""
     
-    convenience init(name: String, lastName: String, sum: String) {
+    convenience init(name: String, lastName: String, sum: String, currency: String) {
         self.init()
         self.name = name
         self.lastName = lastName
         self.sum = sum
+        self.currency = currency
     }
-    
 }

@@ -9,44 +9,38 @@
 import UIKit
 import RealmSwift
 
-class NewDebtorViewController: UITableViewController, UITextFieldDelegate{
+class NewDebtorViewController: UITableViewController, UITextFieldDelegate {
     
     var realm = try! Realm()
-  
-  
     var canurrency = ""
     var newDebtors = Debtors(name: "", lastName: "", sum: "", currency: "")
     
+    //MARK: - Outlets для добавления в список
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var sumTextField: UITextField!
-    
+    //Выбор валюты
     @IBOutlet weak var currencyLabel: UILabel!
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         sumTextField.delegate = self
-        
-        
     }
     
-   
+    //Скрывает клавиатуру
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
-    
-   
-    
-    
+    //MARK: - Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //Передача данных про выбор валюты
         if segue.identifier == "CanurrencySegue"{
-            if let canurrencyVC = segue.destination as? CanurrencySettilngViewController {
-                canurrencyVC.complition = {[weak self] text in
+            if let canurrencyVC = segue.destination as? CurrencySettingsViewController {
+                canurrencyVC.completion = {[weak self] text in
                     guard let self = self else { return }
                     self.currencyLabel.text = text
                     self.canurrency = text
@@ -54,18 +48,12 @@ class NewDebtorViewController: UITableViewController, UITextFieldDelegate{
             }
         }
         
-        
+        //Передача данных
         guard segue.identifier == "SaveSegue" else { return }
-        
         let name = nameTextField.text ?? ""
         let secondName = lastNameTextField.text ?? ""
         let sum = sumTextField.text ?? ""
         let currency = canurrency
         self.newDebtors = Debtors(name: name, lastName: secondName, sum: sum, currency: currency)
-        
     }
-    
-    
-    
-    
 }

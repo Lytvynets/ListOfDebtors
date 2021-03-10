@@ -9,17 +9,15 @@
 import UIKit
 
 class SecondTableViewCell: TableViewCell {
-
+    
     @IBOutlet weak var youOweNameLabel: UILabel!
     @IBOutlet weak var youOweLastNameLabel: UILabel!
     @IBOutlet weak var youOweSumLabel: UILabel!
     @IBOutlet weak var youOweNumberLabel: UILabel!
-   
-
+    
     func set(youDebtorArray: YouDebtors){
         self.youOweNameLabel.text = youDebtorArray.name
         self.youOweLastNameLabel.text = youDebtorArray.lastName
         self.youOweSumLabel.text = youDebtorArray.sum
-       }
- 
+    }
 }

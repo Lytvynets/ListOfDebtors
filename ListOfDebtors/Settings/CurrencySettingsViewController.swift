@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CanurrencySettilngViewController: UITableViewController {
-
+class CurrencySettingsViewController: UITableViewController {
+    
+    //Валюти
     let usd = "USD"
     let uah = "UAH"
     let eur = "EUR"
@@ -18,43 +19,41 @@ class CanurrencySettilngViewController: UITableViewController {
     let gbp = "GBP"
     let btc = "BTC"
     
+    var completion: ((String) -> ())?
     
-    var complition: ((String) -> ())?
-    
-    
+    //MARK:- Кнопки выбора валюты
     @IBAction func usdButton(_ sender: UIButton) {
-        complition?(usd)
+        completion?(usd)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func uahButton(_ sender: UIButton) {
-        complition?(uah)
+        completion?(uah)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func eurButton(_ sender: UIButton) {
-        complition?(eur)
+        completion?(eur)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func rubButton(_ sender: UIButton) {
-        complition?(rub)
+        completion?(rub)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func chfButton(_ sender: UIButton) {
-        complition?(chf)
+        completion?(chf)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func gbpButton(_ sender: UIButton) {
-        complition?(gbp)
+        completion?(gbp)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btcButton(_ sender: UIButton) {
-        complition?(btc)
+        completion?(btc)
         self.dismiss(animated: true, completion: nil)
     }
-    
 }

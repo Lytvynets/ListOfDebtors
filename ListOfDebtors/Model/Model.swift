@@ -21,8 +21,6 @@ class Debtors: Object {
         self.lastName = lastName
         self.sum = sum
         self.currency = currency
-        
     }
-    
 }
 
