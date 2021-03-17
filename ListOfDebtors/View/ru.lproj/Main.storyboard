@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List of Debtors-->
+        <!--Список должников-->
         <scene sceneID="q1y-Cu-Bug">
             <objects>
                 <tableViewController id="iMY-ni-VrE" customClass="TableViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="iMY-ni-VrE" id="mBp-Qu-ymw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List of Debtors" id="cSn-5V-sR4">
+                    <navigationItem key="navigationItem" title="Список должников" id="cSn-5V-sR4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lir-qt-zUp">
                             <connections>
                                 <segue destination="wVy-P1-Pmm" kind="show" identifier="NewDebtorSegue" id="sdN-DU-cZw"/>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="1932" y="-76"/>
         </scene>
-        <!--Settings-->
+        <!--Настройки-->
         <scene sceneID="YAS-nm-48k">
             <objects>
                 <tableViewController storyboardIdentifier="SettingsViewController" id="2FX-jh-fM9" customClass="SettingsViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,28 +107,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-h7-yHG">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-fz-E30">
+                                                    <rect key="frame" x="25" y="7" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="yLN-cS-tx5"/>
+                                                        <constraint firstAttribute="width" constant="110" id="zDP-Zl-ZTZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVR-G9-Bcl">
                                                     <rect key="frame" x="339" y="44" width="36" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Add"/>
                                                     <connections>
-                                                        <action selector="addImageButton:" destination="2FX-jh-fM9" eventType="touchUpInside" id="exN-1c-z4q"/>
+                                                        <action selector="addImageButton:" destination="2FX-jh-fM9" eventType="touchUpInside" id="1gd-g3-VUx"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="df5-v0-h5Q">
-                                                    <rect key="frame" x="25" y="7" width="110" height="110"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="110" id="X48-EO-4ra"/>
-                                                        <constraint firstAttribute="width" constant="110" id="wpH-Dh-4fv"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="df5-v0-h5Q" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="3PV-jf-5O3"/>
-                                                <constraint firstAttribute="trailing" secondItem="hhu-h7-yHG" secondAttribute="trailing" constant="8" id="CHI-yz-8mp"/>
-                                                <constraint firstItem="hhu-h7-yHG" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="dCq-DH-S0q"/>
-                                                <constraint firstItem="df5-v0-h5Q" firstAttribute="leading" secondItem="GjQ-Ke-SI5" secondAttribute="leading" constant="25" id="dM6-vh-uG5"/>
-                                                <constraint firstItem="hhu-h7-yHG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="df5-v0-h5Q" secondAttribute="trailing" constant="8" symbolic="YES" id="hoh-vl-ghu"/>
+                                                <constraint firstItem="pVR-G9-Bcl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5ky-fz-E30" secondAttribute="trailing" constant="8" symbolic="YES" id="7Gz-Fa-HVs"/>
+                                                <constraint firstItem="5ky-fz-E30" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="9BD-T5-I1r"/>
+                                                <constraint firstItem="5ky-fz-E30" firstAttribute="leading" secondItem="GjQ-Ke-SI5" secondAttribute="leading" constant="25" id="SAP-5u-U6h"/>
+                                                <constraint firstItem="pVR-G9-Bcl" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="ipZ-2B-3qk"/>
+                                                <constraint firstAttribute="trailing" secondItem="pVR-G9-Bcl" secondAttribute="trailing" constant="8" id="yaU-kj-nxe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -152,8 +152,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvG-u0-NVf">
-                                                    <rect key="frame" x="71" y="7" width="72" height="30"/>
-                                                    <state key="normal" title="Main color"/>
+                                                    <rect key="frame" x="71" y="7" width="108" height="30"/>
+                                                    <state key="normal" title="Основной цвет"/>
                                                     <connections>
                                                         <segue destination="HnO-Li-eWy" kind="presentation" identifier="ColorPickerSegue" id="JUV-BW-Fah"/>
                                                     </connections>
@@ -188,8 +188,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huG-Pi-Pbp">
-                                                    <rect key="frame" x="71" y="7" width="41" height="30"/>
-                                                    <state key="normal" title="Name"/>
+                                                    <rect key="frame" x="71" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="Имя"/>
                                                     <connections>
                                                         <action selector="nameUserButtonAction:" destination="2FX-jh-fM9" eventType="touchUpInside" id="ij8-G3-yUO"/>
                                                     </connections>
@@ -228,8 +228,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjD-d8-yM1">
-                                                    <rect key="frame" x="70" y="7" width="71" height="30"/>
-                                                    <state key="normal" title="Last name"/>
+                                                    <rect key="frame" x="70" y="7" width="66" height="30"/>
+                                                    <state key="normal" title="Фамилия"/>
                                                     <connections>
                                                         <action selector="surnameUserButtonAction:" destination="2FX-jh-fM9" eventType="touchUpInside" id="Yre-Jl-9Ks"/>
                                                     </connections>
@@ -260,8 +260,8 @@
                             <outlet property="delegate" destination="2FX-jh-fM9" id="clP-6O-FbC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="EzL-f3-C5m">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="w0N-a5-AM9">
+                    <navigationItem key="navigationItem" title="Настройки" id="EzL-f3-C5m">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="w0N-a5-AM9">
                             <connections>
                                 <segue destination="G2C-N7-Uad" kind="unwind" identifier="UnwindseguePro" unwindAction="unwindseguePro:" id="lc8-uH-EMe"/>
                             </connections>
@@ -269,7 +269,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buttonMainColor" destination="OvG-u0-NVf" id="ewZ-h5-Iei"/>
-                        <outlet property="imageProfile" destination="df5-v0-h5Q" id="SMq-xY-VqM"/>
+                        <outlet property="imageProfile" destination="5ky-fz-E30" id="45B-Yp-zh3"/>
                         <outlet property="lastNameUserButton" destination="KjD-d8-yM1" id="K9H-Jz-8Hj"/>
                         <outlet property="nameUserButton" destination="huG-Pi-Pbp" id="0fn-zz-di1"/>
                         <outlet property="nameUserLabel" destination="Pw8-JD-mcg" id="u0a-w0-pAF"/>
@@ -300,8 +300,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9f-Xq-ZRm">
-                                                    <rect key="frame" x="296" y="5" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="287" y="5" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="purpureaButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="vQ9-V1-gza"/>
                                                     </connections>
@@ -341,8 +341,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yit-AT-s8u">
-                                                    <rect key="frame" x="296" y="5" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="287" y="5" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="greenButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="zQ5-Ph-CXF"/>
                                                     </connections>
@@ -382,8 +382,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bD-GD-60e">
-                                                    <rect key="frame" x="296" y="5" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="287" y="5" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="orangeButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="cKE-am-Bqd"/>
                                                     </connections>
@@ -429,7 +429,7 @@
             </objects>
             <point key="canvasLocation" x="-887" y="-337"/>
         </scene>
-        <!-- Profile    -->
+        <!--Профиль-->
         <scene sceneID="tz6-IV-Wy5">
             <objects>
                 <viewController id="xKw-cI-hUu" customClass="ProfileViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -438,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-oP-I5G">
-                                <rect key="frame" x="67" y="152.5" width="280" height="110"/>
+                                <rect key="frame" x="49.5" y="152.5" width="315" height="110"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-C0-ssS">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
@@ -448,16 +448,16 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-60-xnD">
-                                        <rect key="frame" x="143" y="35.5" width="41" height="39"/>
+                                        <rect key="frame" x="143" y="35.5" width="66" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-SJ-EEj">
-                                                <rect key="frame" x="9.5" y="0.0" width="22" height="21.5"/>
+                                                <rect key="frame" x="22" y="0.0" width="22" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-Sa-ZP8">
-                                                <rect key="frame" x="0.0" y="24.5" width="41" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должны вы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-Sa-ZP8">
+                                                <rect key="frame" x="0.0" y="24.5" width="66" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -465,16 +465,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pTn-Xx-3ue">
-                                        <rect key="frame" x="217" y="35.5" width="63" height="39"/>
+                                        <rect key="frame" x="242" y="35.5" width="73" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-az-Qsc">
-                                                <rect key="frame" x="17" y="0.0" width="29.5" height="21.5"/>
+                                                <rect key="frame" x="22" y="0.0" width="29.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Debtor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-fa-zjq">
-                                                <rect key="frame" x="0.0" y="24.5" width="63" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должны вам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-fa-zjq">
+                                                <rect key="frame" x="0.0" y="24.5" width="73" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -490,8 +490,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="34"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Add the debtor">
-                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <state key="normal" title="Добавить должника">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -506,7 +506,7 @@
                                         <rect key="frame" x="196" y="0.0" width="186" height="34"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Add debt">
+                                        <state key="normal" title="Добавить долг">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -520,8 +520,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-OE-lG9">
-                                <rect key="frame" x="60" y="279.5" width="46" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-OE-lG9">
+                                <rect key="frame" x="45" y="279.5" width="34.5" height="23"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -535,13 +535,13 @@
                             <constraint firstItem="xdk-oP-I5G" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="10" id="KjK-Xh-nAu"/>
                             <constraint firstItem="nqr-0V-geP" firstAttribute="trailing" secondItem="Q0F-iq-iCb" secondAttribute="trailing" constant="16" id="NvX-wH-ufe"/>
                             <constraint firstItem="Q0F-iq-iCb" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="180" id="R0P-BX-3zQ"/>
-                            <constraint firstItem="na7-OE-lG9" firstAttribute="leading" secondItem="nqr-0V-geP" secondAttribute="leading" constant="60" id="Ue7-nn-1EF"/>
+                            <constraint firstItem="na7-OE-lG9" firstAttribute="leading" secondItem="nqr-0V-geP" secondAttribute="leading" constant="45" id="Ue7-nn-1EF"/>
                             <constraint firstItem="Q0F-iq-iCb" firstAttribute="centerX" secondItem="nqr-0V-geP" secondAttribute="centerX" id="Vjh-ff-tzj"/>
                             <constraint firstItem="nqr-0V-geP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="na7-OE-lG9" secondAttribute="trailing" id="hA6-le-p5A"/>
                             <constraint firstItem="na7-OE-lG9" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="137" id="qV6-ob-SWi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title=" Profile    " id="ZbX-rn-phB"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="ZbX-rn-phB"/>
                     <connections>
                         <outlet property="addMinusButton" destination="JkE-kv-zq5" id="IHg-ew-JxW"/>
                         <outlet property="addPlusButton" destination="mXO-zq-7Uf" id="OVe-B2-nLM"/>
@@ -575,7 +575,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq1-NH-pcB">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq1-NH-pcB">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -600,7 +600,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buL-8I-ViY">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buL-8I-ViY">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -625,7 +625,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sum" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga9-B0-T9u">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сумма" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga9-B0-T9u">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -654,17 +654,17 @@
                                                     <rect key="frame" x="20" y="15.5" width="339" height="34"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTx-7o-yiw">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="34"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <state key="normal" title="Currency">
+                                                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="34"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                            <state key="normal" title="Валюта">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
                                                                 <segue destination="APg-Ag-ixe" kind="presentation" identifier="CanurrencySegue" id="1MF-8n-3y4"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-xo-kbS">
-                                                            <rect key="frame" x="273" y="0.0" width="66" height="34"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-xo-kbS">
+                                                            <rect key="frame" x="308.5" y="0.0" width="30.5" height="34"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -689,7 +689,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="5H6-vZ-PRO">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="fhN-ml-evi">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="fhN-ml-evi">
                             <connections>
                                 <segue destination="XGA-42-KbJ" kind="unwind" identifier="SaveSegue" unwindAction="unwindsegue:" id="pEC-fQ-Hmr"/>
                             </connections>
@@ -719,22 +719,22 @@
                         <sections>
                             <tableViewSection id="9bc-br-f5d">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4vT-cg-pLT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="4vT-cg-pLT">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4vT-cg-pLT" id="Hxs-wd-5aQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD (United States dollar)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-jb-J6u">
-                                                    <rect key="frame" x="36" y="11" width="185" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11" width="201" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h92-V0-qhn">
-                                                    <rect key="frame" x="336" y="5" width="53" height="34"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="5" width="62" height="34"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="usdButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="pTX-Dz-EuL"/>
                                                     </connections>
@@ -751,22 +751,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2Hg-vM-e5l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="2Hg-vM-e5l">
                                         <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Hg-vM-e5l" id="sT9-s3-RSB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAH (Ukrainian hryvnia)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2Y-rX-fpX">
-                                                    <rect key="frame" x="36" y="12" width="170.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="183" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-ct-ikW">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="uahButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="Vdz-xc-9nR"/>
                                                     </connections>
@@ -781,22 +781,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S4h-yP-Twt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="S4h-yP-Twt">
                                         <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S4h-yP-Twt" id="x39-Pn-cst">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR (Euro)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-pN-acY">
-                                                    <rect key="frame" x="36" y="12" width="78" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-Fk-j3U">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="eurButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="oTT-Bp-SlB"/>
                                                     </connections>
@@ -811,22 +811,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y85-y0-7pp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="y85-y0-7pp">
                                         <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y85-y0-7pp" id="w7T-EW-EeS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB (Russian ruble)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-WE-iqD">
-                                                    <rect key="frame" x="36" y="12" width="139.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-N2-lcP">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="rubButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="1Wk-LW-Qyx"/>
                                                     </connections>
@@ -841,22 +841,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yFf-W9-LlA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="yFf-W9-LlA">
                                         <rect key="frame" x="0.0" y="202" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yFf-W9-LlA" id="o00-uR-o52">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHF (Swiss frank)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6F-HU-g4R">
-                                                    <rect key="frame" x="36" y="12" width="124" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="137" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="723-M3-DeI">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="chfButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="bYX-0n-lFo"/>
                                                     </connections>
@@ -871,22 +871,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lUN-y6-gXS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="lUN-y6-gXS">
                                         <rect key="frame" x="0.0" y="245.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lUN-y6-gXS" id="9Uk-pV-7VN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP ( British pound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-aK-Md4">
-                                                    <rect key="frame" x="36" y="12" width="144.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Hq-uhZ">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="gbpButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="Ed1-iX-DVy"/>
                                                     </connections>
@@ -901,22 +901,22 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rVk-1n-sa6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="rVk-1n-sa6">
                                         <rect key="frame" x="0.0" y="289" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rVk-1n-sa6" id="B3c-zz-1n4">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC (Bitcoin)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-J3-5ED">
-                                                    <rect key="frame" x="36" y="12" width="342" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="311" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9r-DO-mgd">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="296" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="btcButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="gXV-ua-AiS"/>
                                                     </connections>
@@ -969,6 +969,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ixn-Uh-zQa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="lcL-ko-NQO" kind="relationship" relationship="viewControllers" id="rI3-DS-ify"/>
@@ -1031,7 +1032,7 @@
             </objects>
             <point key="canvasLocation" x="-2507" y="141"/>
         </scene>
-        <!--You Debtor-->
+        <!--Ваш долг-->
         <scene sceneID="5al-fm-pCL">
             <objects>
                 <tableViewController id="uWG-pC-hp0" customClass="SecondTableViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1099,7 +1100,7 @@
                             <outlet property="delegate" destination="uWG-pC-hp0" id="aP5-RW-vjz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="You Debtor" id="LrA-6y-4m6">
+                    <navigationItem key="navigationItem" title="Ваш долг" id="LrA-6y-4m6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bON-a0-EI5">
                             <connections>
                                 <segue destination="UK8-vN-cVG" kind="show" id="wsh-GU-oLt"/>
@@ -1111,7 +1112,7 @@
             </objects>
             <point key="canvasLocation" x="1933" y="-806"/>
         </scene>
-        <!--Settings-->
+        <!--You New Debtor View Controller-->
         <scene sceneID="ygX-hF-lrg">
             <objects>
                 <tableViewController id="UK8-vN-cVG" customClass="YouNewDebtorViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1129,7 +1130,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-S6-7Gr">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-S6-7Gr">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1154,7 +1155,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeS-mG-7oI">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeS-mG-7oI">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1179,7 +1180,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sum" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgo-SC-iUi">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сумма" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgo-SC-iUi">
                                                     <rect key="frame" x="20" y="2" width="374" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1208,18 +1209,18 @@
                                                     <rect key="frame" x="20" y="15.5" width="339" height="34"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjT-xA-WJ0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="34"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                            <state key="normal" title="Currency">
+                                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="34"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                            <state key="normal" title="Валюта">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
                                                                 <segue destination="aFi-YO-hMO" kind="presentation" identifier="YouCanurrencySegue" id="rRO-Ub-AsQ"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z04-5i-AtR">
-                                                            <rect key="frame" x="273" y="0.0" width="66" height="34"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z04-5i-AtR">
+                                                            <rect key="frame" x="306.5" y="0.0" width="32.5" height="34"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1242,8 +1243,8 @@
                             <outlet property="delegate" destination="UK8-vN-cVG" id="TLR-mw-32t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="XbS-5Q-qu2">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="LP5-lO-Cgy">
+                    <navigationItem key="navigationItem" id="XbS-5Q-qu2">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="LP5-lO-Cgy">
                             <connections>
                                 <segue destination="7pS-9e-HnH" kind="unwind" identifier="SecondSaveSegue" unwindAction="Secondunwindsegue:" id="YyL-fa-R9k"/>
                             </connections>
@@ -1273,6 +1274,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                            <color key="textShadowColor" systemColor="scrollViewTexturedBackgroundColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
@@ -1309,14 +1311,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD (United States dollar)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3md-67-wvl">
-                                                    <rect key="frame" x="36" y="11" width="185" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11" width="201" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFe-LF-LEC">
-                                                    <rect key="frame" x="336" y="5" width="53" height="34"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="5" width="62" height="34"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="usdButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="sCg-3V-dkz"/>
                                                     </connections>
@@ -1341,14 +1343,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAH (Ukrainian hryvnia)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyw-RI-Jzd">
-                                                    <rect key="frame" x="36" y="12" width="170.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="183" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsW-hz-5F0">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="uahButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="eza-9U-Aah"/>
                                                     </connections>
@@ -1371,14 +1373,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR (Euro)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82C-up-sdb">
-                                                    <rect key="frame" x="36" y="12" width="78" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="84" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-jk-IRm">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="eurButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="M18-8D-MYc"/>
                                                     </connections>
@@ -1401,14 +1403,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB (Russian ruble)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-Yb-oWa">
-                                                    <rect key="frame" x="36" y="12" width="139.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N05-rH-tZY">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="rubButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="kb1-Le-Qda"/>
                                                     </connections>
@@ -1431,14 +1433,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHF (Swiss frank)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IH-fg-Cgh">
-                                                    <rect key="frame" x="36" y="12" width="124" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="137" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-Uw-axR">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="chfButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="jA3-6j-1qF"/>
                                                     </connections>
@@ -1461,14 +1463,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP ( British pound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-Cw-dTQ">
-                                                    <rect key="frame" x="36" y="12" width="144.5" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4e-ZY-MhW">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="gbpButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="r1o-sq-awr"/>
                                                     </connections>
@@ -1491,14 +1493,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC (Bitcoin)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amv-cZ-l5e">
-                                                    <rect key="frame" x="36" y="12" width="342" height="20"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11.5" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-lY-hPj">
-                                                    <rect key="frame" x="336" y="7" width="53" height="30"/>
-                                                    <state key="normal" title="Choose"/>
+                                                    <rect key="frame" x="327" y="7" width="62" height="30"/>
+                                                    <state key="normal" title="Выбрать"/>
                                                     <connections>
                                                         <action selector="btcButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="55B-VM-1CR"/>
                                                     </connections>
@@ -1555,7 +1557,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yrh-d2-Mdg"/>
-        <segue reference="sdN-DU-cZw"/>
+        <segue reference="3sY-Cy-wBl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="26736028_189803618270799_916653761_o" width="720" height="1280"/>
@@ -1568,8 +1570,8 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct ProfileName {
-   var profileName: String?
-}
-
-struct ProfileLastName {
+struct Profile {
+    var profileName: String?
     var profileLastName: String?
+
+    init(name: String) {
+        self.profileName = name
+    }
+     
+    init(lastName: String) {
+        self.profileLastName = lastName
+    }
 }

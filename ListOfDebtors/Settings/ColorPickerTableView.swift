@@ -9,27 +9,45 @@
 import UIKit
 
 class ColorPickerTableView: UITableViewController {
+
+    var geenKey = "GeenKey"
+    var orangeKey = "OrangeKey"
+    var purpuleKey = "PurpuleKey"
     
     var green = UIColor.green
     var orange = UIColor.orange
     var purpure = UIColor.purple
     
-    @IBOutlet weak var purpureButton: UIButton!
     
-    var comp: ((UIColor) -> ())?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.tableFooterView = UIView()
+
+    }
+    
     
     @IBAction func purpureaButtonAction(_ sender: UIButton) {
-        comp?(purpure)
+        completionTable?(purpure, green)
+        completionSecondTable?(purpure, green)
+        completionInSettings?(purpure, green)
+        completionInProfile?(purpure, green)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func greenButtonAction(_ sender: UIButton) {
-        comp?(green)
+        completionTable?(green, orange)
+        completionSecondTable?(green, orange)
+        completionInSettings?(green, orange)
+        completionInProfile?(green, orange)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func orangeButtonAction(_ sender: UIButton) {
-        comp?(orange)
+        completionTable?(orange, green)
+        completionSecondTable?(orange, green)
+        completionInSettings?(orange, green)
+        completionInProfile?(orange, green)
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

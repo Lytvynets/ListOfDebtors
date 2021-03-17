@@ -8,16 +8,17 @@
 
 import UIKit
 import RealmSwift
-
+var youAllSumProfile = 0
 var youDebtorArray: Results<YouDebtors>!
 
 class SecondTableViewController: UITableViewController {
     
     var youDeb = youDebtorArray
+    var completionYouAllSum: ((Int) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "list of debtors"
+    //self.title = "Должны вы"
         self.tableView.separatorStyle = .singleLine
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
@@ -25,6 +26,11 @@ class SecondTableViewController: UITableViewController {
         let realm = try! Realm()
         youDebtorArray = realm.objects(YouDebtors.self)
         self.tableView.reloadData()
+        self.completionYouAllSum?(youAllSumProfile)
+        for i in youDebtorArray{
+            let sum = i.sum
+            youAllSumProfile += sum
+        }
     }
     
     // MARK: - Table view data source
@@ -36,12 +42,9 @@ class SecondTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecondCell", for: indexPath) as! SecondTableViewCell
         let debtors = youDebtorArray[indexPath.row]
         cell.youOweNumberLabel.text = ("\(indexPath.row + 1)")
-        cell.youOweNameLabel.text = debtors.name
-        cell.youOweLastNameLabel.text = debtors.lastName
-        cell.youOweSumLabel.text = (" - \(debtors.sum) \(debtors.currency) ")
+        cell.set(youDebtorArray: debtors)
         return cell
     }
-    
     
     // MARK: - Work with Segue
     @IBAction func Secondunwindsegue (_ segue: UIStoryboardSegue){

@@ -13,13 +13,13 @@ class NewDebtorViewController: UITableViewController, UITextFieldDelegate {
     
     var realm = try! Realm()
     var canurrency = ""
-    var newDebtors = Debtors(name: "", lastName: "", sum: "", currency: "")
+    var newDebtors = Debtors(name: "", lastName: "", sum: 0, currency: "")
     
     //MARK: - Outlets для добавления в список
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var sumTextField: UITextField!
-    //Выбор валюты
+    @IBOutlet weak var currencyStaticLabel: UIButton!
     @IBOutlet weak var currencyLabel: UILabel!
     
     override func viewDidLoad() {
@@ -54,6 +54,6 @@ class NewDebtorViewController: UITableViewController, UITextFieldDelegate {
         let secondName = lastNameTextField.text ?? ""
         let sum = sumTextField.text ?? ""
         let currency = canurrency
-        self.newDebtors = Debtors(name: name, lastName: secondName, sum: sum, currency: currency)
+        self.newDebtors = Debtors(name: name, lastName: secondName, sum: Int(sum) ?? 0, currency: currency)
     }
 }

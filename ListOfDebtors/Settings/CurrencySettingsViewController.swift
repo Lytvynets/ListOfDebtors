@@ -19,7 +19,32 @@ class CurrencySettingsViewController: UITableViewController {
     let gbp = "GBP"
     let btc = "BTC"
     
+    @IBOutlet weak var usdLabel: UILabel!
+    @IBOutlet weak var uahLabel: UILabel!
+    @IBOutlet weak var eurLabel: UILabel!
+    @IBOutlet weak var rubLabel: UILabel!
+    @IBOutlet weak var chfLabel: UILabel!
+    @IBOutlet weak var gbpLabel: UILabel!
+    @IBOutlet weak var btcLabel: UILabel!
+    
+    @IBOutlet weak var usdButton: UIButton!
+    @IBOutlet weak var uahButton: UIButton!
+    @IBOutlet weak var eurButton: UIButton!
+    @IBOutlet weak var rubButton: UIButton!
+    @IBOutlet weak var chfButton: UIButton!
+    @IBOutlet weak var gbpButton: UIButton!
+    @IBOutlet weak var btcButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.tableFooterView = UIView()
+
+    }
+    
+    
     var completion: ((String) -> ())?
+    
     
     //MARK:- Кнопки выбора валюты
     @IBAction func usdButton(_ sender: UIButton) {

@@ -9,16 +9,16 @@
 import RealmSwift
 import Foundation
 
+var allSumProfile = 0
 var debtorsArray: Results<Debtors>!
 
 class TableViewController: UITableViewController {
     
     var deb = debtorsArray
-    var completionSum: ((Debtors) -> ())?
+    var completionAllSum: ((Int) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "list of debtors"
         self.tableView.separatorStyle = .singleLine
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
@@ -26,6 +26,11 @@ class TableViewController: UITableViewController {
         let realm = try! Realm()
         debtorsArray = realm.objects(Debtors.self)
         self.tableView.reloadData()
+        self.completionAllSum?(allSumProfile)
+        for i in debtorsArray {
+            let sum = i.sum
+            allSumProfile += sum
+        }
     }
     
     // MARK: - Table view data source
