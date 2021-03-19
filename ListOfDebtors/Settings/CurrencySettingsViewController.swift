@@ -9,6 +9,8 @@
 import UIKit
 
 class CurrencySettingsViewController: UITableViewController {
+  
+    var completion: ((String) -> ())?
     
     //Валюти
     let usd = "USD"
@@ -35,15 +37,10 @@ class CurrencySettingsViewController: UITableViewController {
     @IBOutlet weak var gbpButton: UIButton!
     @IBOutlet weak var btcButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-
     }
-    
-    
-    var completion: ((String) -> ())?
     
     
     //MARK:- Кнопки выбора валюты

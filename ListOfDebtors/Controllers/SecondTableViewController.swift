@@ -18,7 +18,6 @@ class SecondTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //self.title = "Должны вы"
         self.tableView.separatorStyle = .singleLine
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
@@ -57,7 +56,6 @@ class SecondTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
     
     // MARK: - Delete Cell
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

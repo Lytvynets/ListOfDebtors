@@ -22,6 +22,7 @@
 		E365B07725F6666500C0DE79 /* ColorPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365B07625F6666500C0DE79 /* ColorPickerTableView.swift */; };
 		E366D48825EA84C4000BC51E /* NewDebtorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E366D48725EA84C4000BC51E /* NewDebtorViewController.swift */; };
 		E36B717A25FD9A55003AE572 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B717925FD9A54003AE572 /* ColorData.swift */; };
+		E371C0EE2604D0AF000E4D19 /* ImageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E371C0ED2604D0AE000E4D19 /* ImageDefaults.swift */; };
 		E373B12225F3C19100D554E9 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373B12125F3C19100D554E9 /* SecondTableViewController.swift */; };
 		E373B12525F3C1C000D554E9 /* YouNewDebtorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373B12425F3C1C000D554E9 /* YouNewDebtorViewController.swift */; };
 		E373B12825F3C1F200D554E9 /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373B12725F3C1F200D554E9 /* SecondModel.swift */; };
@@ -49,6 +50,7 @@
 		E365B07625F6666500C0DE79 /* ColorPickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerTableView.swift; sourceTree = "<group>"; };
 		E366D48725EA84C4000BC51E /* NewDebtorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDebtorViewController.swift; sourceTree = "<group>"; };
 		E36B717925FD9A54003AE572 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		E371C0ED2604D0AE000E4D19 /* ImageDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDefaults.swift; sourceTree = "<group>"; };
 		E373B12125F3C19100D554E9 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondTableViewController.swift; path = ListOfDebtors/Controllers/SecondTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		E373B12425F3C1C000D554E9 /* YouNewDebtorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouNewDebtorViewController.swift; sourceTree = "<group>"; };
 		E373B12725F3C1F200D554E9 /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				E361B7F1257585BC0094790C /* Model.swift */,
 				E373B12725F3C1F200D554E9 /* SecondModel.swift */,
 				E32E5A2E25F8C3F5006252AD /* SettingModel.swift */,
+				E371C0ED2604D0AE000E4D19 /* ImageDefaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				E373B12C25F3C24100D554E9 /* SecondTableViewCell.swift in Sources */,
 				E373B13225F5322600D554E9 /* CurrencySettingsViewController.swift in Sources */,
 				E36B717A25FD9A55003AE572 /* ColorData.swift in Sources */,
+				E371C0EE2604D0AF000E4D19 /* ImageDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -437,8 +437,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-oP-I5G">
-                                <rect key="frame" x="67" y="152.5" width="280" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-oP-I5G">
+                                <rect key="frame" x="45" y="152.5" width="324" height="110"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-C0-ssS">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
@@ -448,7 +448,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-60-xnD">
-                                        <rect key="frame" x="143" y="35.5" width="41" height="39"/>
+                                        <rect key="frame" x="165" y="35.5" width="41" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-SJ-EEj">
                                                 <rect key="frame" x="9.5" y="0.0" width="22" height="21.5"/>
@@ -465,7 +465,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pTn-Xx-3ue">
-                                        <rect key="frame" x="217" y="35.5" width="63" height="39"/>
+                                        <rect key="frame" x="261" y="35.5" width="63" height="39"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-az-Qsc">
                                                 <rect key="frame" x="17" y="0.0" width="29.5" height="21.5"/>
@@ -521,7 +521,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na7-OE-lG9">
-                                <rect key="frame" x="60" y="279.5" width="46" height="23"/>
+                                <rect key="frame" x="30" y="277.5" width="46" height="23"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -535,10 +535,10 @@
                             <constraint firstItem="xdk-oP-I5G" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="10" id="KjK-Xh-nAu"/>
                             <constraint firstItem="nqr-0V-geP" firstAttribute="trailing" secondItem="Q0F-iq-iCb" secondAttribute="trailing" constant="16" id="NvX-wH-ufe"/>
                             <constraint firstItem="Q0F-iq-iCb" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="180" id="R0P-BX-3zQ"/>
-                            <constraint firstItem="na7-OE-lG9" firstAttribute="leading" secondItem="nqr-0V-geP" secondAttribute="leading" constant="60" id="Ue7-nn-1EF"/>
+                            <constraint firstItem="na7-OE-lG9" firstAttribute="leading" secondItem="nqr-0V-geP" secondAttribute="leading" constant="30" id="Ue7-nn-1EF"/>
                             <constraint firstItem="Q0F-iq-iCb" firstAttribute="centerX" secondItem="nqr-0V-geP" secondAttribute="centerX" id="Vjh-ff-tzj"/>
                             <constraint firstItem="nqr-0V-geP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="na7-OE-lG9" secondAttribute="trailing" id="hA6-le-p5A"/>
-                            <constraint firstItem="na7-OE-lG9" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="137" id="qV6-ob-SWi"/>
+                            <constraint firstItem="na7-OE-lG9" firstAttribute="top" secondItem="nqr-0V-geP" secondAttribute="top" constant="135" id="qV6-ob-SWi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" Profile    " id="ZbX-rn-phB"/>
@@ -1555,7 +1555,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yrh-d2-Mdg"/>
-        <segue reference="sdN-DU-cZw"/>
+        <segue reference="3sY-Cy-wBl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="26736028_189803618270799_916653761_o" width="720" height="1280"/>

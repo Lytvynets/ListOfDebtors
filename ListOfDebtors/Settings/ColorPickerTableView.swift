@@ -9,22 +9,15 @@
 import UIKit
 
 class ColorPickerTableView: UITableViewController {
-
-    var geenKey = "GeenKey"
-    var orangeKey = "OrangeKey"
-    var purpuleKey = "PurpuleKey"
     
     var green = UIColor.green
     var orange = UIColor.orange
     var purpure = UIColor.purple
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-
     }
-    
     
     @IBAction func purpureaButtonAction(_ sender: UIButton) {
         completionTable?(purpure, green)
@@ -49,5 +42,4 @@ class ColorPickerTableView: UITableViewController {
         completionInProfile?(orange, green)
         self.dismiss(animated: true, completion: nil)
     }
-    
 }

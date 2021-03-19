@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
+
+var profileArray: Results<Profile>!
 
 class ProfileViewController: UIViewController{
     
     @IBOutlet weak var addMinusButton: UIButton!
     @IBOutlet weak var addPlusButton: UIButton!
-    
     @IBOutlet weak var sumLabel: UILabel!
     @IBOutlet weak var youSumLabel: UILabel!
     @IBOutlet weak var allSum: UILabel!
@@ -20,23 +22,12 @@ class ProfileViewController: UIViewController{
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    static var name = ""
-    static var lastName = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileImage.layer.cornerRadius = 55
         nameLabel.text = UserDefaults.standard.string(forKey: "NameLabel")
-        
-//        addPlusButton.layer.borderWidth = 1
-//        addMinusButton.layer.borderWidth = 1
-//
-//        addPlusButton.layer.borderColor = .init(red: 100.0, green: 100.0, blue: 100.0, alpha: 100.0)
-//        addMinusButton.layer.borderColor = .init(red: 100.0, green: 100.0, blue: 100.0, alpha: 100.0)
-        
+        profileImage.image = UIImage(data: Base.shared.imageArrayPro.first?.imagePro ?? .init())
     }
-    
-
     
     override func viewWillAppear(_ animated: Bool) {
         self.allSumYou.text = "\(youAllSumProfile)"
@@ -55,10 +46,10 @@ class ProfileViewController: UIViewController{
     @IBAction func unwindseguePro (_ segue: UIStoryboardSegue){
         guard segue.identifier == "UnwindseguePro" else { return }
         let segue = segue.source as! SettingsViewController
-        
         let name = segue.profileName
         let lastName = segue.profileLastName
-        
+        let iamge = Base.shared.imageArrayPro[0].imagePro
+        profileImage.image = UIImage(data: iamge!)
         nameLabel.text = "\(name.profileName ?? "")" + " " + "\(lastName.profileLastName ?? "")"
         UserDefaults.standard.set(nameLabel.text, forKey: "NameLabel")
     }

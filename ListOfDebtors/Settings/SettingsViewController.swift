@@ -7,41 +7,34 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SettingsViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    let realm = try! Realm()
+    let defaults = UserDefaults.standard
+    let picker = UIImagePickerController()
+    
     var profileName = Profile(lastName: "")
     var profileLastName = Profile(lastName: "")
-    
-    let ressian = "Russian"
-    let ukraine = "Ukraine"
-    let english = "English"
-    
-    let defaults = UserDefaults.standard
-    
+ 
     //MARK:- Outlets
     @IBOutlet weak var nameUserButton: UIButton!
     @IBOutlet weak var lastNameUserButton: UIButton!
     @IBOutlet weak var buttonMainColor: UIButton!
     @IBOutlet weak var nameUserLabel: UILabel!
     @IBOutlet weak var surnameUserLabel: UILabel!
-    
     @IBOutlet weak var imageProfile: UIImageView!
-    let picker = UIImagePickerController()
-    let present = UIViewController()
     
-    
-    
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        
         self.picker.delegate = self
         self.picker.allowsEditing = true
-      
-
     }
     
+    //MARK:- viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         completionInSettings = { [self] labelColor, buttonColor in
             self.buttonMainColor.tintColor = buttonColor
@@ -51,25 +44,28 @@ class SettingsViewController: UITableViewController, UIImagePickerControllerDele
             self.lastNameUserButton.tintColor = buttonColor
         }
     }
-            
     
     //MARK:- Кнопки для авторизации пользователя
-    
     @IBAction func addImageButton(_ sender: UIButton) {
-    
         self.picker.sourceType = .photoLibrary
         self.present(picker, animated: true)
     }
     
+    //Добавления фото профиля
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let oroginImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        self.imageProfile.image = oroginImage
+        Base.shared.allSave(image: oroginImage)
+        self.picker.dismiss(animated: true, completion: nil)
+    }
     
-    
+    //MARK:- Добавления имени пользователя
     @IBAction func nameUserButtonAction(_ sender: UIButton) {
         let alert=UIAlertController(title: "Ведите имя", message: nil, preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction) in
             let user = alert.textFields!
-            
             self.profileName = Profile(name: user[0].text ?? "")
             self.nameUserLabel.text = user[0].text
             
@@ -77,7 +73,7 @@ class SettingsViewController: UITableViewController, UIImagePickerControllerDele
         present(alert, animated: true, completion: nil)
     }
     
-    
+    //MARK:- Добавления фамилии пользователя
     @IBAction func surnameUserButtonAction(_ sender: UIButton) {
         let alert=UIAlertController(title: "Ведите Фамилию", message: nil, preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: nil)
@@ -89,6 +85,4 @@ class SettingsViewController: UITableViewController, UIImagePickerControllerDele
         }))
         present(alert, animated: true, completion: nil)
     }
-
-    
 }
