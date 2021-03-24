@@ -27,7 +27,11 @@ class NewDebtorViewController: UITableViewController, UITextFieldDelegate {
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         sumTextField.delegate = self
+       
     }
+    
+    
+    
     
     //Скрывает клавиатуру
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

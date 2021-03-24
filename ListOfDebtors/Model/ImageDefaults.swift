@@ -33,9 +33,39 @@ class Base {
         }
     }
     
+    
     func allSave(image: UIImage){
         let data = NSData(data: image.pngData()!)
         let imageDefaults = ImageDefaults(imagePro: data as Data )
         imageArrayPro.insert(imageDefaults, at: 0)
+    }
+    
+    
+    
+    struct ColorDefaults: Codable{
+        let colorPro: Data?
+    }
+    
+    var colorArrayPro: [ColorDefaults]{
+        get{
+            if let data = defaults.value(forKey: "color") as? Data{
+                return try! PropertyListDecoder().decode([ColorDefaults].self, from: data)
+            }else{
+                return [ColorDefaults]()
+            }
+        }
+        set{
+            if let data = try? PropertyListEncoder().encode(newValue) {
+                defaults.set(data, forKey: "color")
+            }
+        }
+    }
+    
+    
+    
+    func allSaveColor(color: UIColor){
+        let data = NSData(data: color.cgColor as! Data)
+        let colorDefaults = ColorDefaults(colorPro: data as Data )
+        colorArrayPro.insert(colorDefaults, at: 0)
     }
 }

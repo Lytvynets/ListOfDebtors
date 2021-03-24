@@ -25,8 +25,8 @@ class ProfileViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileImage.layer.cornerRadius = 55
-        nameLabel.text = UserDefaults.standard.string(forKey: "NameLabel")
-        profileImage.image = UIImage(data: Base.shared.imageArrayPro.first?.imagePro ?? .init())
+        self.nameLabel.text = UserDefaults.standard.string(forKey: "NameLabel")
+        self.profileImage.image = UIImage(data:  Base.shared.imageArrayPro.first?.imagePro ?? .init())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,8 +49,8 @@ class ProfileViewController: UIViewController{
         let name = segue.profileName
         let lastName = segue.profileLastName
         let iamge = Base.shared.imageArrayPro[0].imagePro
-        profileImage.image = UIImage(data: iamge!)
-        nameLabel.text = "\(name.profileName ?? "")" + " " + "\(lastName.profileLastName ?? "")"
+        self.profileImage.image = UIImage(data: iamge!)
+        self.nameLabel.text = "\(name.profileName ?? "")" + " " + "\(lastName.profileLastName ?? "")"
         UserDefaults.standard.set(nameLabel.text, forKey: "NameLabel")
     }
 }

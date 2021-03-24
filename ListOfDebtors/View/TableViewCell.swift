@@ -19,6 +19,6 @@ class TableViewCell: UITableViewCell {
     func set(debtorsArray: Debtors){
         self.nameLabel.text = debtorsArray.name
         self.lastNameLabel.text = debtorsArray.lastName
-        self.sumLabel.text = ("\(debtorsArray.sum) - \(debtorsArray.currency)")
+        self.sumLabel.text = ("\(debtorsArray.sum). \(debtorsArray.currency)")
     }
 }

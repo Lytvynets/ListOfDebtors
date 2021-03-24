@@ -24,6 +24,7 @@ class ColorPickerTableView: UITableViewController {
         completionSecondTable?(purpure, green)
         completionInSettings?(purpure, green)
         completionInProfile?(purpure, green)
+        //Base.shared.allSaveColor(color: purpure)
         self.dismiss(animated: true, completion: nil)
     }
     

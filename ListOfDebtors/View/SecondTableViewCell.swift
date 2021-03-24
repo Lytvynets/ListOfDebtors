@@ -18,6 +18,6 @@ class SecondTableViewCell: TableViewCell {
     func set(youDebtorArray: YouDebtors){
         self.youOweNameLabel.text = youDebtorArray.name
         self.youOweLastNameLabel.text = youDebtorArray.lastName
-        self.youOweSumLabel.text = " - \(youDebtorArray.sum) - \(youDebtorArray.currency)"
+        self.youOweSumLabel.text = " - \(youDebtorArray.sum). \(youDebtorArray.currency)"
     }
 }

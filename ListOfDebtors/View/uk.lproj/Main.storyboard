@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,7 +79,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Список боржників" id="cSn-5V-sR4">
+                        <barButtonItem key="backBarButtonItem" title="                                  " id="77n-HA-aed"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lir-qt-zUp">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="wVy-P1-Pmm" kind="show" identifier="NewDebtorSegue" id="sdN-DU-cZw"/>
                             </connections>
@@ -100,24 +103,32 @@
                         <sections>
                             <tableViewSection id="6Wg-JJ-MeX">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="124" id="2uQ-DG-n2g">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="2uQ-DG-n2g">
                                         <rect key="frame" x="0.0" y="28" width="414" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2uQ-DG-n2g" id="GjQ-Ke-SI5">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="124"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-GF-CRt">
-                                                    <rect key="frame" x="25" y="7" width="110" height="110"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-GF-CRt">
+                                                    <rect key="frame" x="25" y="7.5" width="110" height="109"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="XOr-Q2-UtW"/>
                                                         <constraint firstAttribute="height" constant="110" id="r1z-26-lJM"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="55"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="861-7m-xly">
-                                                    <rect key="frame" x="339" y="44" width="36" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="Add"/>
+                                                    <rect key="frame" x="302" y="45.5" width="96" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Додати фото">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="addImageButton:" destination="2FX-jh-fM9" eventType="touchUpInside" id="7c9-hE-jhw"/>
                                                     </connections>
@@ -125,7 +136,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ACa-GF-CRt" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="1CM-8e-Dkg"/>
-                                                <constraint firstAttribute="trailing" secondItem="861-7m-xly" secondAttribute="trailing" constant="8" id="XWn-MW-R7U"/>
+                                                <constraint firstAttribute="trailing" secondItem="861-7m-xly" secondAttribute="trailing" constant="16" id="XWn-MW-R7U"/>
                                                 <constraint firstItem="861-7m-xly" firstAttribute="centerY" secondItem="GjQ-Ke-SI5" secondAttribute="centerY" id="fJa-EX-rPT"/>
                                                 <constraint firstItem="861-7m-xly" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ACa-GF-CRt" secondAttribute="trailing" constant="8" symbolic="YES" id="fK1-1R-AO6"/>
                                                 <constraint firstItem="ACa-GF-CRt" firstAttribute="leading" secondItem="GjQ-Ke-SI5" secondAttribute="leading" constant="25" id="rEh-Wg-K2a"/>
@@ -136,11 +147,11 @@
                             </tableViewSection>
                             <tableViewSection id="yfd-9Y-f3g">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="6hT-uB-a69">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6hT-uB-a69">
                                         <rect key="frame" x="0.0" y="208" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hT-uB-a69" id="ING-LP-Z6t">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintbrush" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fn2-yL-cmO">
@@ -152,8 +163,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvG-u0-NVf">
-                                                    <rect key="frame" x="71" y="7" width="114" height="30"/>
-                                                    <state key="normal" title="Основний колір"/>
+                                                    <rect key="frame" x="71" y="5.5" width="120" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Основний колір">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <segue destination="HnO-Li-eWy" kind="presentation" identifier="ColorPickerSegue" id="JUV-BW-Fah"/>
                                                     </connections>
@@ -188,8 +202,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huG-Pi-Pbp">
-                                                    <rect key="frame" x="71" y="7" width="30" height="30"/>
-                                                    <state key="normal" title="Ім'я"/>
+                                                    <rect key="frame" x="71" y="5.5" width="30" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Ім'я">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="nameUserButtonAction:" destination="2FX-jh-fM9" eventType="touchUpInside" id="ij8-G3-yUO"/>
                                                     </connections>
@@ -228,8 +245,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjD-d8-yM1">
-                                                    <rect key="frame" x="70" y="7" width="70" height="30"/>
-                                                    <state key="normal" title="Прізвище"/>
+                                                    <rect key="frame" x="70" y="5.5" width="73" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Прізвище">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="surnameUserButtonAction:" destination="2FX-jh-fM9" eventType="touchUpInside" id="Yre-Jl-9Ks"/>
                                                     </connections>
@@ -262,6 +282,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Налаштування" id="EzL-f3-C5m">
                         <barButtonItem key="rightBarButtonItem" title="Зберегти" id="w0N-a5-AM9">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="G2C-N7-Uad" kind="unwind" identifier="UnwindseguePro" unwindAction="unwindseguePro:" id="lc8-uH-EMe"/>
                             </connections>
@@ -300,8 +321,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9f-Xq-ZRm">
-                                                    <rect key="frame" x="288" y="5" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="286" y="5" width="63" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="purpureaButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="vQ9-V1-gza"/>
                                                     </connections>
@@ -341,8 +365,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yit-AT-s8u">
-                                                    <rect key="frame" x="288" y="5" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="286" y="5" width="63" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="greenButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="zQ5-Ph-CXF"/>
                                                     </connections>
@@ -382,8 +409,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bD-GD-60e">
-                                                    <rect key="frame" x="288" y="5" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="286" y="5" width="63" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="orangeButtonAction:" destination="HnO-Li-eWy" eventType="touchUpInside" id="cKE-am-Bqd"/>
                                                     </connections>
@@ -440,23 +470,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-oP-I5G">
                                 <rect key="frame" x="38.5" y="152.5" width="337" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="26736028_189803618270799_916653761_o" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-C0-ssS">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-C0-ssS">
+                                        <rect key="frame" x="0.0" y="0.5" width="110" height="109"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="71T-ho-iKW"/>
                                             <constraint firstAttribute="height" constant="110" id="VTM-9Y-4Vc"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-60-xnD">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pTn-Xx-3ue">
                                         <rect key="frame" x="150" y="35.5" width="58" height="39"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-SJ-EEj">
-                                                <rect key="frame" x="18" y="0.0" width="22" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-az-Qsc">
+                                                <rect key="frame" x="14.5" y="0.0" width="29.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Винні вам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-Sa-ZP8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Винні вам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-fa-zjq">
                                                 <rect key="frame" x="0.0" y="24.5" width="58" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -464,16 +495,16 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pTn-Xx-3ue">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-60-xnD">
                                         <rect key="frame" x="248" y="35.5" width="89" height="39"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-az-Qsc">
-                                                <rect key="frame" x="30" y="0.0" width="29.5" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-SJ-EEj">
+                                                <rect key="frame" x="33.5" y="0.0" width="22" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зовнішній борг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-fa-zjq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зовнішній борг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty3-Sa-ZP8">
                                                 <rect key="frame" x="0.0" y="24.5" width="89" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -557,7 +588,7 @@
             </objects>
             <point key="canvasLocation" x="-58" y="510"/>
         </scene>
-        <!--New Debtor View Controller-->
+        <!--Додати боржника-->
         <scene sceneID="IHa-qh-2iZ">
             <objects>
                 <tableViewController storyboardIdentifier="NewDebtorViewController" id="wVy-P1-Pmm" customClass="NewDebtorViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -655,7 +686,7 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTx-7o-yiw">
                                                             <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <state key="normal" title="Валюта">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
@@ -688,8 +719,9 @@
                             <outlet property="delegate" destination="wVy-P1-Pmm" id="3P2-XE-Vpj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5H6-vZ-PRO">
+                    <navigationItem key="navigationItem" title="Додати боржника" id="5H6-vZ-PRO">
                         <barButtonItem key="rightBarButtonItem" title="Зберегти" id="fhN-ml-evi">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="XGA-42-KbJ" kind="unwind" identifier="SaveSegue" unwindAction="unwindsegue:" id="pEC-fQ-Hmr"/>
                             </connections>
@@ -727,14 +759,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD (United States dollar)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-jb-J6u">
-                                                    <rect key="frame" x="36" y="11" width="201" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11" width="187" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h92-V0-qhn">
-                                                    <rect key="frame" x="328" y="5" width="61" height="34"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5" width="63" height="34"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="usdButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="pTX-Dz-EuL"/>
                                                     </connections>
@@ -759,14 +794,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAH (Ukrainian hryvnia)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2Y-rX-fpX">
-                                                    <rect key="frame" x="36" y="11.5" width="183" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="172" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-ct-ikW">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="uahButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="Vdz-xc-9nR"/>
                                                     </connections>
@@ -789,14 +827,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR (Euro)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXH-pN-acY">
-                                                    <rect key="frame" x="36" y="11.5" width="84" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="79" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-Fk-j3U">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="eurButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="oTT-Bp-SlB"/>
                                                     </connections>
@@ -819,14 +860,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB (Russian ruble)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-WE-iqD">
-                                                    <rect key="frame" x="36" y="11.5" width="153" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="141" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-N2-lcP">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="rubButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="1Wk-LW-Qyx"/>
                                                     </connections>
@@ -849,14 +893,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHF (Swiss frank)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6F-HU-g4R">
-                                                    <rect key="frame" x="36" y="11.5" width="137" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="125" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="723-M3-DeI">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="chfButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="bYX-0n-lFo"/>
                                                     </connections>
@@ -879,14 +926,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP ( British pound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-aK-Md4">
-                                                    <rect key="frame" x="36" y="11.5" width="156" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="146" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Hq-uhZ">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="gbpButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="Ed1-iX-DVy"/>
                                                     </connections>
@@ -909,14 +959,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC (Bitcoin)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-J3-5ED">
-                                                    <rect key="frame" x="36" y="11.5" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="342" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9r-DO-mgd">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="btcButton:" destination="APg-Ag-ixe" eventType="touchUpInside" id="gXV-ua-AiS"/>
                                                     </connections>
@@ -970,6 +1023,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="lcL-ko-NQO" kind="relationship" relationship="viewControllers" id="rI3-DS-ify"/>
@@ -986,7 +1040,9 @@
         <scene sceneID="oXH-0E-btg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uFf-hh-Eps" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tray.and.arrow.down" catalog="system" id="beH-WQ-Fbp"/>
+                    <tabBarItem key="tabBarItem" title="" id="beH-WQ-Fbp">
+                        <imageReference key="image" image="tray.and.arrow.down" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jb6-FD-S2q">
                         <rect key="frame" x="0.0" y="44" width="414" height="98.5"/>
@@ -1014,7 +1070,9 @@
         <scene sceneID="bGJ-WA-e7P">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vip-78-0oS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="pencil" catalog="system" id="AgC-GD-PAb"/>
+                    <tabBarItem key="tabBarItem" title="" id="AgC-GD-PAb">
+                        <imageReference key="image" image="book" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qt2-nS-AYF">
                         <rect key="frame" x="0.0" y="44" width="414" height="98.5"/>
@@ -1101,7 +1159,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Ваш борг" id="LrA-6y-4m6">
+                        <barButtonItem key="backBarButtonItem" title="                                  " id="VKC-nP-QzY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bON-a0-EI5">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="UK8-vN-cVG" kind="show" id="wsh-GU-oLt"/>
                             </connections>
@@ -1112,7 +1172,7 @@
             </objects>
             <point key="canvasLocation" x="1933" y="-806"/>
         </scene>
-        <!--You New Debtor View Controller-->
+        <!--Додати борг-->
         <scene sceneID="ygX-hF-lrg">
             <objects>
                 <tableViewController id="UK8-vN-cVG" customClass="YouNewDebtorViewController" customModule="List_Of_Debtors_Alpha0_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1210,7 +1270,7 @@
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjT-xA-WJ0">
                                                             <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <state key="normal" title="Валюта">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
@@ -1243,8 +1303,9 @@
                             <outlet property="delegate" destination="UK8-vN-cVG" id="TLR-mw-32t"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XbS-5Q-qu2">
+                    <navigationItem key="navigationItem" title="Додати борг" id="XbS-5Q-qu2">
                         <barButtonItem key="rightBarButtonItem" title="Зберегти" id="LP5-lO-Cgy">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="7pS-9e-HnH" kind="unwind" identifier="SecondSaveSegue" unwindAction="Secondunwindsegue:" id="YyL-fa-R9k"/>
                             </connections>
@@ -1267,7 +1328,9 @@
         <scene sceneID="2Gs-qK-Pze">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Io7-mr-U4j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tray.and.arrow.up" catalog="system" id="Na9-sm-Xpf"/>
+                    <tabBarItem key="tabBarItem" title="" id="Na9-sm-Xpf">
+                        <imageReference key="image" image="tray.and.arrow.up" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Dul-oQ-drb">
                         <rect key="frame" x="0.0" y="44" width="414" height="98.5"/>
@@ -1311,14 +1374,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD (United States dollar)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3md-67-wvl">
-                                                    <rect key="frame" x="36" y="11" width="201" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="11" width="187" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFe-LF-LEC">
-                                                    <rect key="frame" x="328" y="5" width="61" height="34"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5" width="63" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="usdButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="sCg-3V-dkz"/>
                                                     </connections>
@@ -1343,14 +1409,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAH (Ukrainian hryvnia)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyw-RI-Jzd">
-                                                    <rect key="frame" x="36" y="11.5" width="183" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="172" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsW-hz-5F0">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="uahButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="eza-9U-Aah"/>
                                                     </connections>
@@ -1373,14 +1442,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR (Euro)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82C-up-sdb">
-                                                    <rect key="frame" x="36" y="11.5" width="84" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="79" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-jk-IRm">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="eurButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="M18-8D-MYc"/>
                                                     </connections>
@@ -1403,14 +1475,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB (Russian ruble)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-Yb-oWa">
-                                                    <rect key="frame" x="36" y="11.5" width="153" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="141" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N05-rH-tZY">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="rubButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="kb1-Le-Qda"/>
                                                     </connections>
@@ -1433,14 +1508,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHF (Swiss frank)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IH-fg-Cgh">
-                                                    <rect key="frame" x="36" y="11.5" width="137" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="125" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-Uw-axR">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="chfButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="jA3-6j-1qF"/>
                                                     </connections>
@@ -1463,14 +1541,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP ( British pound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-Cw-dTQ">
-                                                    <rect key="frame" x="36" y="11.5" width="156" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="146" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4e-ZY-MhW">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="gbpButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="r1o-sq-awr"/>
                                                     </connections>
@@ -1493,14 +1574,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC (Bitcoin)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amv-cZ-l5e">
-                                                    <rect key="frame" x="36" y="11.5" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="36" y="12" width="342" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-lY-hPj">
-                                                    <rect key="frame" x="328" y="7" width="61" height="30"/>
-                                                    <state key="normal" title="Вибрати"/>
+                                                    <rect key="frame" x="326" y="5.5" width="63" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <state key="normal" title="Вибрати">
+                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="btcButton:" destination="aFi-YO-hMO" eventType="touchUpInside" id="55B-VM-1CR"/>
                                                     </connections>
@@ -1556,13 +1640,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yrh-d2-Mdg"/>
-        <segue reference="3sY-Cy-wBl"/>
+        <segue reference="wsh-GU-oLt"/>
+        <segue reference="sdN-DU-cZw"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="26736028_189803618270799_916653761_o" width="720" height="1280"/>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="paintbrush" catalog="system" width="122" height="128"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="tray.and.arrow.down" catalog="system" width="128" height="109"/>

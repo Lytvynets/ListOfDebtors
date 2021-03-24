@@ -22,6 +22,7 @@ class SecondTableViewController: UITableViewController {
         self.tableView.separatorInset = .init(top: 0, left: 23, bottom: 0, right: 25)
         self.tableView.separatorColor = .lightGray
         self.tableView.tableFooterView = UIView()
+        self.navigationItem.backBarButtonItem?.tintColor = .label
         let realm = try! Realm()
         youDebtorArray = realm.objects(YouDebtors.self)
         self.tableView.reloadData()
