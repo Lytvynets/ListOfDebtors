@@ -41,7 +41,6 @@ class Base {
     }
     
     
-    
     struct ColorDefaults: Codable{
         let colorPro: Data?
     }
@@ -60,7 +59,6 @@ class Base {
             }
         }
     }
-    
     
     
     func allSaveColor(color: UIColor){
