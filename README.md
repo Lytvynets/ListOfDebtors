@@ -7,6 +7,6 @@ This application helps to record people's money debt
 - In the settings, you can enable notifications on a specific day of the week and time, You can also switch between light and dark theme in the settings.
 - You can enable Touch ID/Face ID when logging into the application
 
-Contact Support:   
+# Contact Support   
 vladlytvynets7@gmail.com   
 https://t.me/ThePsih13
